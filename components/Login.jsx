@@ -49,7 +49,7 @@ function Login() {
 
   useEffect(() => {
     async function checkEmail() {
-      setMsg("");
+      setMsg(null);
       setResult(null);
       if (!email || checking) return;
 
@@ -98,6 +98,7 @@ function Login() {
         </p>
         <button
           onClick={() => {
+            setMsg(null);
             setIsRegistration(!isRegistration);
           }}
         >
